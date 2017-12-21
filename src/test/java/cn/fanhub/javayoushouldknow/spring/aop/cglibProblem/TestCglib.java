@@ -1,6 +1,8 @@
 package cn.fanhub.javayoushouldknow.spring.aop.cglibProblem;
 
-import cn.fanhub.javayoushouldknow.spring.bean.TestService;
+import cn.fanhub.javayoushouldknow.spring.bean.CglibService;
+import cn.fanhub.javayoushouldknow.spring.bean.JdkService;
+import cn.fanhub.javayoushouldknow.spring.bean.NormalService;
 import org.junit.Test;
 import org.springframework.aop.framework.AdvisedSupport;
 import org.springframework.aop.support.AopUtils;
@@ -18,16 +20,31 @@ public class TestCglib {
     @Test
     public void test(){
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath*:spring/aop.xml");
-        TestService testService = (TestService) context.getBean("testService");
-        Class<?>[] interfaces = testService.getClass().getInterfaces();
+        CglibService cglibService = (CglibService) context.getBean("cglibService");
+        Class<?>[] interfaces = cglibService.getClass().getInterfaces();
 
-        System.err.println("+---------------------------------------------------------+");
+        System.err.println("+-----------------------cglibService----------------------------------+");
         for (Class<?> anInterface : interfaces) {
             System.err.println(anInterface);
         }
-        System.err.println("+---------------------------------------------------------+");
+        System.err.println("+-----------------------cglibService resource----------------------------------+");
 
-        interfaces = getTarget(testService).getClass().getInterfaces();
+        interfaces = getTarget(cglibService).getClass().getInterfaces();
+        for (Class<?> anInterface : interfaces) {
+            System.err.println(anInterface);
+        }
+
+        System.err.println("+-----------------------jdkService----------------------------------+");
+        JdkService jdkService = (JdkService) context.getBean("jdkService");
+        interfaces = jdkService.getClass().getInterfaces();
+        for (Class<?> anInterface : interfaces) {
+            System.err.println(anInterface);
+        }
+
+        System.err.println("+-----------------------normalService----------------------------------+");
+
+        NormalService normalService = (NormalService) context.getBean("normalService");
+        interfaces = normalService.getClass().getInterfaces();
         for (Class<?> anInterface : interfaces) {
             System.err.println(anInterface);
         }

@@ -17,13 +17,23 @@
     <!--<context:component-scan base-package="com.alipay.boot.test.aop" />-->
     <!--<context:annotation-config />-->
 
-    <bean id="testService" class="cn.fanhub.javayoushouldknow.spring.bean.impl.TestServiceImpl" ></bean>
+    <bean id="normalService" class="cn.fanhub.javayoushouldknow.spring.bean.impl.NormalServiceImpl" ></bean>
+
+    <bean id="jdkService" class="cn.fanhub.javayoushouldknow.spring.bean.impl.JdkServiceImpl" ></bean>
+    <bean id="cglibService" class="cn.fanhub.javayoushouldknow.spring.bean.impl.CglibServiceImpl" ></bean>
     <bean id="useCglibAspect" class="cn.fanhub.javayoushouldknow.spring.aop.cglibProblem.UseCglibAspect"/>
 
     <aop:config proxy-target-class="true">
-        <aop:aspect id="aop" ref="useCglibAspect">
-            <aop:pointcut id="test" expression="execution(* cn.fanhub.javayoushouldknow.spring.bean.impl.*.*(..))" />
-            <aop:before pointcut-ref="test" method="before"/>
+        <aop:aspect id="cglib" ref="useCglibAspect">
+            <aop:pointcut id="cglibtest" expression="execution(* cn.fanhub.javayoushouldknow.spring.bean.impl.CglibServiceImpl.*(..))" />
+            <aop:before pointcut-ref="cglibtest" method="before"/>
+        </aop:aspect>
+    </aop:config>
+
+    <aop:config proxy-target-class="false">
+        <aop:aspect id="jdk" ref="useCglibAspect">
+            <aop:pointcut id="jdktest" expression="execution(* cn.fanhub.javayoushouldknow.spring.bean.impl.JdkServiceImpl.*(..))" />
+            <aop:before pointcut-ref="jdktest" method="before"/>
         </aop:aspect>
     </aop:config>
 
