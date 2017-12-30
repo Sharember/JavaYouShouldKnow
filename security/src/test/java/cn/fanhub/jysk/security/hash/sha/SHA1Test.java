@@ -9,7 +9,7 @@ import org.junit.Test;
  */
 public class SHA1Test {
 
-    private static String testStr = "123456";
+    private static String testStr = "abc";
 
     @Test
     public void SHA1CommonCodecTest() {
@@ -58,4 +58,30 @@ public class SHA1Test {
         System.out.println(Hex.encodeHexString(sha1Self.getDigestOfBytes(testStr.getBytes())));
         System.out.println();
     }
+
+    /** 结果
+     +--------------------SHA1CommonCodec.sha1Hex------------------------+
+     a9993e364706816aba3e25717850c26c9cd0d89d
+
+     +--------------------SHA1CommonCodec.sha1------------------------+
+     -87-1036254716-127106-70623711312080-62108-100-48-40-99
+
+     +--------------------SHA1CommonCodec.sha1AndEncodeHexString------------------------+
+     a9993e364706816aba3e25717850c26c9cd0d89d
+
+     +--------------------SHA1Self.getDigestOfBytes------------------------+
+     -87-1036254716-127106-70623711312080-62108-100-48-40-99
+
+     +--------------------SHA1Self.getDigestOfString by ShaUtil------------------------+
+     a9993e364706816aba3e25717850c26c9cd0d89d
+
+     +--------------------SHA1Self.getDigestOfString by common-codec encodeHexString------------------------+
+     a9993e364706816aba3e25717850c26c9cd0d89d
+
+     +--------------------SHA1Jdk.encode------------------------+
+     -87-1036254716-127106-70623711312080-62108-100-48-40-99
+
+     +--------------------SHA1Jdk.encodeAndEncodeHexString------------------------+
+     a9993e364706816aba3e25717850c26c9cd0d89d
+     */
 }
