@@ -15,7 +15,8 @@
 		<module>spring</module>
 		<module>security</module>
 		<module>DesignPattern</module>
-	</modules>
+        <module>rpc</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
