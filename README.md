@@ -11,3 +11,6 @@ some knowledge for java. include jdk, jvm, spring and so on
 
 3. [rpc](http://blog.fanhub.cn/categories/%E5%88%86%E5%B8%83%E5%BC%8F/rpc/)
    - [java 实现简单的 rpc ](http://blog.fanhub.cn/2018/01/29/%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%8D%E5%8A%A1/java-rpc/)
+
+4. [java 序列化与反序列化](http://blog.fanhub.cn/categories/分布式/序列化与反序列化/)
+   - [java 原生序列化方式](http://blog.fanhub.cn/2018/01/30/java/序列化与反序列化/java-origin/)
