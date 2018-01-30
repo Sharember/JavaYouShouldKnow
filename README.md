@@ -8,3 +8,6 @@ some knowledge for java. include jdk, jvm, spring and so on
 
 2. [security](http://blog.fanhub.cn/categories/JavaYouShouldKnow/security/)
    - [Java 与 SHA-1算法](http://blog.fanhub.cn/2017/12/30/security/%E3%80%90security%E3%80%91Java%20%E4%B8%8E%20SHA-1%E7%AE%97%E6%B3%95/) 
+
+3. [rpc](http://blog.fanhub.cn/categories/%E5%88%86%E5%B8%83%E5%BC%8F/rpc/)
+   - [java 实现简单的 rpc ](http://blog.fanhub.cn/2018/01/29/%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%8D%E5%8A%A1/java-rpc/)
