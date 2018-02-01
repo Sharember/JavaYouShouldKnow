@@ -1,11 +1,12 @@
-package cn.fanhub.rpc.serialization.base;
+package cn.fanhub.serialization;
 
 import java.io.Serializable;
-
+import java.util.Date;
 
 public class JavaSerializerModel implements Serializable {
-    private transient String name = "name";
+    private transient String name  = "name";
     private String phone = "123";
+    private Date date = new Date(1514739661000L);
 
     public String getName() {
         return name;
@@ -21,5 +22,13 @@ public class JavaSerializerModel implements Serializable {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

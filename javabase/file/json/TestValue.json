@@ -1,0 +1,10 @@
+{
+  "int": 123,
+  "string": "123",
+  "long": 123456789111111111,
+  "double": 1.2,
+  "boolean": false,
+  "booleanb": "false",
+  "string2": false,
+  "longlong": "123456789111111111"
+}

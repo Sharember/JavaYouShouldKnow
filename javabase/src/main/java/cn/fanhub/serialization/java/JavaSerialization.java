@@ -1,8 +1,6 @@
-package cn.fanhub.rpc.serialization;
+package cn.fanhub.serialization.java;
 
-import cn.fanhub.rpc.serialization.base.JavaSerializerModel;
-import cn.fanhub.rpc.serialization.base.JavaSerializerModel2;
-import cn.fanhub.rpc.serialization.base.MySerializer;
+import cn.fanhub.serialization.base.MySerializer;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -26,6 +24,7 @@ public class JavaSerialization implements MySerializer{
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public <T> T deserialize(byte[] data, Class<T> clazz) {
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(data);
         try {
@@ -36,20 +35,4 @@ public class JavaSerialization implements MySerializer{
         }
     }
 
-    public static void main(String[] args) {
-        JavaSerialization javaSerialization = new JavaSerialization();
-        JavaSerializerModel serializerModel = new JavaSerializerModel();
-        JavaSerializerModel model = javaSerialization.deserialize(javaSerialization.serialize(serializerModel), JavaSerializerModel.class);
-
-        System.out.println(model.getName());
-        System.out.println(model.getPhone());
-
-        System.out.println("------model2--------");
-
-        JavaSerializerModel2 serializerModel2 = new JavaSerializerModel2();
-        JavaSerializerModel2 model2 = javaSerialization.deserialize(javaSerialization.serialize(serializerModel2), JavaSerializerModel2.class);
-
-        System.out.println(model2.getName());
-        System.out.println(model2.getPhone());
-    }
 }

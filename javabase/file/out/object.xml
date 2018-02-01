@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_152" class="java.beans.XMLDecoder">
+ <object class="cn.fanhub.javabase.xml.User">
+  <void property="age">
+   <int>18</int>
+  </void>
+  <void property="userName">
+   <string>jack</string>
+  </void>
+ </object>
+</java>
