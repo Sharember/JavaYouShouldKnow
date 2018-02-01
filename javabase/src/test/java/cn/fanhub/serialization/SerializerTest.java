@@ -49,7 +49,6 @@ public class SerializerTest {
         JavaSerializerModel2 model2 = xstreamXMLSerializer.deserialize(xstreamXMLSerializer.serialize(serializerModel2), JavaSerializerModel2.class);
         System.out.println(model2.getName());
         System.out.println(model2.getPhone());
-        System.out.println(model.getDate());
     }
 
 
