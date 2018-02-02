@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-public class JavaSerialization implements MySerializer{
+public class JavaSerializer implements MySerializer{
 
     @Override
     public <T> byte[] serialize(T obj) {

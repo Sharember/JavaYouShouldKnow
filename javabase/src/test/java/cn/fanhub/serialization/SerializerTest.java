@@ -1,6 +1,7 @@
 package cn.fanhub.serialization;
 
-import cn.fanhub.serialization.java.JavaSerialization;
+import cn.fanhub.serialization.hessian.HessionSerializer;
+import cn.fanhub.serialization.java.JavaSerializer;
 import cn.fanhub.serialization.json.JsonSerializer;
 import cn.fanhub.serialization.xml.JavaXMLSerializer;
 import cn.fanhub.serialization.xml.XStreamXMLSerializer;
@@ -10,7 +11,7 @@ public class SerializerTest {
 
     @Test
     public void testJava() {
-        JavaSerialization javaSerialization = new JavaSerialization();
+        JavaSerializer javaSerialization = new JavaSerializer();
         JavaSerializerModel serializerModel = new JavaSerializerModel();
         JavaSerializerModel model = javaSerialization.deserialize(javaSerialization.serialize(serializerModel), JavaSerializerModel.class);
 
@@ -60,6 +61,21 @@ public class SerializerTest {
         System.out.println(model.getName());
         System.out.println(model.getPhone());
         System.out.println(model.getDate());
+    }
+
+    @Test
+    public void testHession() {
+        HessionSerializer hessionSerializer = new HessionSerializer();
+        JavaSerializerModel serializerModel = new JavaSerializerModel();
+        JavaSerializerModel model = hessionSerializer.deserialize(hessionSerializer.serialize(serializerModel), JavaSerializerModel.class);
+        System.out.println(model.getName());
+        System.out.println(model.getPhone());
+
+        System.out.println("----2-----");
+        JavaSerializerModel2 serializerModel2 = new JavaSerializerModel2();
+        JavaSerializerModel2 model2 = hessionSerializer.deserialize(hessionSerializer.serialize(serializerModel2), JavaSerializerModel2.class);
+        System.out.println(model2.getName());
+        System.out.println(model2.getPhone());
     }
 
 }
