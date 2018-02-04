@@ -17,6 +17,7 @@
 		<module>DesignPattern</module>
         <module>rpc</module>
 		<module>javabase</module>
+		<module>concurrency</module>
 	</modules>
 
 	<parent>
@@ -28,15 +29,11 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.12</version>
-			</dependency>
+
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
-				<version>3.6</version>
+				<version>3.5</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-codec</groupId>
@@ -57,6 +54,16 @@
 				<groupId>com.caucho</groupId>
 				<artifactId>hessian</artifactId>
 				<version>4.0.38</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.protobuf</groupId>
+				<artifactId>protobuf-java</artifactId>
+				<version>3.5.1</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.12</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

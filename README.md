@@ -16,3 +16,6 @@ some knowledge for java. include jdk, jvm, spring and so on
    - [java 原生序列化方式](http://blog.fanhub.cn/2018/01/30/java/序列化与反序列化/java-origin/)
    - [xml 序列化方式](http://blog.fanhub.cn/2018/02/01/java/序列化与反序列化/xml/)
    - [json 与 hession 序列化方式](http://blog.fanhub.cn/2018/02/02/java/序列化与反序列化/json-hession/)
+
+5. [java 并发](http://blog.fanhub.cn/categories/java/%E5%B9%B6%E5%8F%91/)
+   - [1. java 多线程核心概念](http://blog.fanhub.cn/2018/02/03/java/concurrency/concept/)
