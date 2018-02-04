@@ -19,3 +19,4 @@ some knowledge for java. include jdk, jvm, spring and so on
 
 5. [java 并发](http://blog.fanhub.cn/categories/java/%E5%B9%B6%E5%8F%91/)
    - [1. java 多线程核心概念](http://blog.fanhub.cn/2018/02/03/java/concurrency/concept/)
+   - [2. 线程的状态](http://blog.fanhub.cn/2018/02/04/java/concurrency/state/)
