@@ -18,7 +18,8 @@
         <module>rpc</module>
 		<module>javabase</module>
 		<module>concurrency</module>
-	</modules>
+        <module>ReactorProgram</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -64,6 +65,11 @@
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>4.12</version>
+			</dependency>
+			<dependency>
+				<groupId>io.projectreactor</groupId>
+				<artifactId>reactor-core</artifactId>
+				<version>3.0.5.RELEASE</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

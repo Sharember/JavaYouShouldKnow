@@ -1,7 +1,6 @@
 package cn.fanhub.javabase.protobuf;
 
 import com.google.protobuf.InvalidProtocolBufferException;
-import org.apache.commons.lang3.math.NumberUtils;
 
 import java.util.Arrays;
 
@@ -26,7 +25,5 @@ public class ProtobufDemo {
         //反序列化方式二
         newReq = SearchRequestOuterClass.SearchRequest.parseFrom(request.toByteArray());
         System.out.println(newReq.getQuery());
-
-        System.out.println(NumberUtils.isCreatable("5e2"));
     }
 }
