@@ -2,8 +2,9 @@
  * Fanhub.cn
  * Copyright (c) 2014-2018 All Rights Reserved.
  */
-package cn.fanhub.callback;
+package cn.fanhub;
 
+import cn.fanhub.callback.NoParamFunction;
 import reactor.core.scheduler.Scheduler;
 import reactor.core.scheduler.Schedulers;
 

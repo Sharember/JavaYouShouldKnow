@@ -2,8 +2,9 @@
  * Fanhub.cn
  * Copyright (c) 2014-2018 All Rights Reserved.
  */
-package cn.fanhub.callback;
+package cn.fanhub;
 
+import cn.fanhub.callback.CallBack;
 import reactor.core.publisher.Mono;
 
 import java.util.Map;
@@ -25,10 +26,11 @@ public class FavoriteService {
     }
 
     public void getDetails(String id, CallBack callBack){
-        callBack.onSuccess(map.get(id));
+        new Thread(() -> callBack.onSuccess(map.get(id))).start();
     }
 
-    public Mono<String> getDetails(Favorite favorite) {
-        return Mono.just(favorite.getName());
+    public Mono<Favorite> getDetails(String id) {
+        //System.out.println(Count.count++);
+        return Mono.just(map.get(id)).publishOn(UiUtils.uiThreadScheduler());
     }
 }

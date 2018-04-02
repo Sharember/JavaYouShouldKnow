@@ -64,4 +64,11 @@ public class FluxTest {
         }).subscribe(System.out::println);
     }
 
+    @Test
+    public void test4() {
+        Flux.merge(Flux.intervalMillis(0, 100).take(5), Flux.intervalMillis(50, 100).take(5))
+                .toStream()
+                .forEach(System.out::println);
+    }
+
 }

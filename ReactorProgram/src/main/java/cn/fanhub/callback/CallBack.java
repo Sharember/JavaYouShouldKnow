@@ -9,5 +9,7 @@ package cn.fanhub.callback;
  * @author chengfan
  * @version $Id: CallBack.java, v 0.1 2018年03月11日 下午4:32 chengfan Exp $
  */
-public class CallBack {
+public interface CallBack<T> {
+    void onSuccess(T t);
+    void onError(Throwable error);
 }

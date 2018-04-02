@@ -24,4 +24,5 @@ package cn.fanhub;
  * @version $Id: Count.java, v 0.1 2018年03月14日 上午11:32 chengfan Exp $
  */
 public class Count {
+    public static int count = 1;
 }

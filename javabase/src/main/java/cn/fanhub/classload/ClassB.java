@@ -24,4 +24,7 @@ package cn.fanhub.classload;
  * @version $Id: ClassB.java, v 0.1 2018年03月14日 下午6:43 chengfan Exp $
  */
 public class ClassB {
+    public ClassB() {
+        System.out.println(this.getClass().getClassLoader().toString());
+    }
 }

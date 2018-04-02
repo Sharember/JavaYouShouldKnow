@@ -24,4 +24,9 @@ package cn.fanhub.classload;
  * @version $Id: ClassA.java, v 0.1 2018年03月14日 下午6:43 chengfan Exp $
  */
 public class ClassA {
+
+    private int a;
+    private static double b;
+    private final static String c = "c";
+
 }

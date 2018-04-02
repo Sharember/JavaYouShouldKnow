@@ -13,9 +13,9 @@ import cn.fanhub.UserService;
 /**
  *
  * @author chengfan
- * @version $Id: Reactor.java, v 0.1 2018年03月11日 下午5:49 chengfan Exp $
+ * @version $Id: UseReactor.java, v 0.1 2018年03月11日 下午5:49 chengfan Exp $
  */
-public class Reactor {
+public class UseReactor {
 
     public static void main(String[] args) {
         UserService userService = new UserService();
@@ -26,10 +26,13 @@ public class Reactor {
 
         userService
             .getFavorites(userId)
+            .flatMap(favoriteService::getDetails)
+            .doOnEach(uiList::showThread)
             .switchIfEmpty(suggestionService.getSuggestions())
             .take(5)
-            .flatMap(favoriteService::getDetails)
             .publishOn(UiUtils.uiThreadScheduler())
             .subscribe(uiList::show, UiUtils::errorPopup);
     }
+
+
 }

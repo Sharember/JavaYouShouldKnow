@@ -1,20 +1,26 @@
-/**
- * Fanhub.cn
- * Copyright (c) 2014-2018 All Rights Reserved.
- */
 package cn.fanhub.map;
 
 /**
  *
  * @author chengfan
- * @version $Id: Str.java, v 0.1 2018年03月26日 下午8:00 chengfan Exp $
+ * @version $Id: Strings.java, v 0.1 2018年03月26日 下午8:00 chengfan Exp $
  */
-public class Str implements Comparable<Integer> {
+public class Strings implements Comparable<Strings> {
     private String str;
     private int count;
 
     @Override
-    public int compareTo(Integer o) {
-        return 0;
+    public int compareTo(Strings strings) {
+        return this.count - strings.count;
+    }
+
+    public Strings(String str, int count) {
+        this.str = str;
+        this.count = count;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("[str] = %s, [count] = %d", str, count);
     }
 }

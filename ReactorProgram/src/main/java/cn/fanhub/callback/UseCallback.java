@@ -16,9 +16,9 @@ import java.util.List;
 /**
  *
  * @author chengfan
- * @version $Id: Test.java, v 0.1 2018年03月11日 下午4:33 chengfan Exp $
+ * @version $Id: UseCallback.java, v 0.1 2018年03月11日 下午4:33 chengfan Exp $
  */
-public class Test {
+public class UseCallback {
     public static void main(String[] args) {
         UserService userService = new UserService();
         SuggestionService suggestionService = new SuggestionService();

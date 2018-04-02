@@ -7,7 +7,9 @@ package cn.fanhub.callback;
 /**
  *
  * @author chengfan
- * @version $Id: NoPrramFunction.java, v 0.1 2018年03月11日 下午5:21 chengfan Exp $
+ * @version $Id: NoParamFunction.java, v 0.1 2018年03月11日 下午5:21 chengfan Exp $
  */
-public class NoParamFunction {
+@FunctionalInterface
+public interface NoParamFunction {
+    void apply();
 }
