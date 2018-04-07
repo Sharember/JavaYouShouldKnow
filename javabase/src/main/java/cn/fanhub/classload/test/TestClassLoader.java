@@ -1,4 +1,8 @@
-package cn.fanhub.classload.threadcl;
+/**
+ * Alipay.com Inc.
+ * Copyright (c) 2004-2018 All Rights Reserved.
+ */
+package cn.fanhub.classload.test;
 
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -6,24 +10,17 @@ import java.net.URLClassLoader;
 /**
  *
  * @author chengfan
- * @version $Id: UserClassloader.java, v 0.1 2018年03月29日 下午9:51 chengfan Exp $
+ * @version $Id: TestClassLoader.java, v 0.1 2018年03月28日 下午2:39 chengfan Exp $
  */
-public class UserClassloader extends URLClassLoader{
-
-    public UserClassloader(URL[] urls, ClassLoader parent) {
+public class TestClassLoader extends URLClassLoader{
+    public TestClassLoader(URL[] urls, ClassLoader parent) {
         super(urls, parent);
-    }
-
-    @Override
-    public Class<?> loadClass(String name) throws ClassNotFoundException {
-        return loadClass(name, false);
     }
 
     @Override
     protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
 
-
-        if (name.contains("Spi")) {
+        if (name.contains("ClassA")) {
             Class clazz = findClass(name);
 
             if (resolve) {
@@ -31,6 +28,9 @@ public class UserClassloader extends URLClassLoader{
             }
             return clazz;
         }
+
         return super.loadClass(name, resolve);
     }
+
+
 }

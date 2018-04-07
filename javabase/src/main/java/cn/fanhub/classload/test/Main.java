@@ -16,7 +16,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package cn.fanhub.classload;
+package cn.fanhub.classload.test;
 
 import java.io.File;
 import java.net.MalformedURLException;
