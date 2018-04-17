@@ -13,29 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cn.fanhub.Introspector;
+package cn.fanhub.jysk.spring.introspector;
 
 /**
  *
  * @author chengfan
- * @version $Id: User.java, v 0.1 2018年04月16日 下午8:36 chengfan Exp $
+ * @version $Id: User.java, v 0.1 2018年04月17日 下午9:05 chengfan Exp $
  */
 public class User {
+
     private String name;
+
     private int age;
-    public User(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public int getAge() {
         return age;
     }
+
     public void setAge(int age) {
         this.age = age;
     }

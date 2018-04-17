@@ -25,13 +25,13 @@ import java.beans.PropertyDescriptor;
 /**
  *
  * @author chengfan
- * @version $Id: Introspector.java, v 0.1 2018年04月16日 下午8:37 chengfan Exp $
+ * @version $Id: IntrospectorTest.java, v 0.1 2018年04月16日 下午8:37 chengfan Exp $
  */
 public class IntrospectorTest {
 
 
     @Test
-    public void test1 () throws Exception {
+    public void test2 () throws Exception {
         User user = new User("jack", 21);
 
         String propertyName = "name";
@@ -53,7 +53,7 @@ public class IntrospectorTest {
     }
 
     @Test
-    public void test2() throws Exception {
+    public void test1() throws Exception {
         // 获取整个Bean的信息
         // BeanInfo beanInfo= Introspector.getBeanInfo(user.getClass());
         // 在Object类时候停止检索，可以选择在任意一个父类停止
