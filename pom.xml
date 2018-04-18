@@ -21,6 +21,7 @@
         <module>ReactorProgram</module>
         <module>leetcode</module>
         <module>netty</module>
+        <module>utils-learn</module>
     </modules>
 
 	<parent>
@@ -49,6 +50,11 @@
 				<version>1.2.25.internal.v9</version>
 			</dependency>
 			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>1.9.3</version>
+			</dependency>
+			<dependency>
 				<groupId>com.thoughtworks.xstream</groupId>
 				<artifactId>xstream</artifactId>
 				<version>1.4.9</version>
@@ -62,6 +68,11 @@
 				<groupId>com.google.protobuf</groupId>
 				<artifactId>protobuf-java</artifactId>
 				<version>3.5.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-framework-web</artifactId>
+				<version>4.0.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>junit</groupId>
